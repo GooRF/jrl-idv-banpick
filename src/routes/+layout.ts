@@ -1,2 +1,4 @@
+import "../main.css"
+
 export const ssr = false
 export const prerender = true

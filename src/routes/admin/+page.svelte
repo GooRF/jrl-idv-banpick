@@ -60,11 +60,11 @@ import ChooseSurvivor from "$lib/chooseSurvivor.svelte";
     <fieldset class="flex-col">
         <legend>选手信息</legend>
         {#each [1, 2, 3, 4] as n}
-        <label for="sn{n}">求生者选手{n}名字</label>
-        <input type="text" name="sn{n}" id="sn{n}">
+            <label for="sn{n}">求生者选手{n}名字</label>
+            <input bind:value={survivorNames[n-1]} type="text" name="sn{n}" id="sn{n}">
         {/each}
-        <label for="hn">监管者选手名字</label>
-        <input type="text" name="hn" id="hn">
+            <label for="hn">监管者选手名字</label>
+            <input bind:value={hunterName} type="text" name="hn" id="hn">
     </fieldset>
     </div>
 </form>
